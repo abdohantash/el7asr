@@ -1,11 +1,8 @@
 (function ($) {
     "use strict";
 
-
-
 // Preloader
 $(".preloader").delay(1600).fadeOut("slow");
-
 
 // Sticky Menu
 $(window).on( 'scroll', function() {
@@ -16,23 +13,6 @@ $(window).on( 'scroll', function() {
         $(".header-menu-area").removeClass("sticky");
     }
 });
-
-      
-// Nice select
-$(document).ready(function() {
-  $('select').niceSelect();
-});
-
-// Magnific Popup video
-  $('.popup-youtube').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
-  });
         
 // Mobile menu
 $('.hamburger').on( 'click', function (event) {
@@ -58,183 +38,21 @@ $(".main-nav .fl").on('click', function(event) {
 
 
 
-  
-// Home One  Popular Jobs Slide
-
-$('.popular-job-slide').owlCarousel({
-  items: 3.5,
+// slider 
+$('.hero-silder').owlCarousel({
+  items: 1,
   loop: true,
   smartSpeed: 1500,
-  autoplay: false,
+  autoplay: true,
+  autoplayTimeout:5000,
+  autoplayHoverPause:true,
   dots: true,
-  margin:24,
   nav: false,
-  navText : ["<i class='ts ts-1 bx bxs-left-arrow-alt'></i>","<i class='ts ts-2 bx bxs-right-arrow-alt' ></i>"], 
-  responsive:{
-      0:{
-          items:1,
-          autoplay: true
-      },
-      480:{
-          items:1,
-          autoplay: true
-      },
-
-      768:{
-          items:1
-      },
-      992:{
-          items:2
-      },
-      1200:{
-          items:3
-      },
-      1400:{
-          items:3.5
-      }
-
-  } 
-});
-
-// Home One  Popular Jobs Slide End
-
-
-// Slick slide testimonial Home One Start
-
-
-$('.testimonial-img-slide-wrap').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  asNavFor: '.testimonial-content-slide-wrap',
-  dots: false,
-  fade: true,
-  arrows: false,
-  speed: 1000
-});
-$('.testimonial-content-slide-wrap').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  dots: false,
-  speed: 1000,
-  arrows: true,
-  prevArrow:"<i class='tst tst-1 bi bi-arrow-left'></i>",
-  nextArrow:"<i class='tst tst-2 bi bi-arrow-right' ></i>",
-  asNavFor: '.testimonial-img-slide-wrap'
-});
-// Slick slide testimonial Home One End
-
-
-// Slick slide Destination Start
-
-
-$('.destination-slide-wrap').slick({
-slidesToShow: 2.5,
-slidesToScroll: 1,
-dots: false,
-arrows: true,
-prevArrow:"<i class='tst tst-1 bi bi-arrow-left'></i>",
-nextArrow:"<i class='tst tst-2 bi bi-arrow-right' ></i>",
-centerMode: false,
-focusOnSelect: false,
-responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-
-    ]
-});
-
-// Slick slide Destination End
-
-    
-// Pricing Toggle
-
-var checkBox = document.querySelectorAll("#checbox")
-
-for(let i = 0; i < checkBox.length; i++){
-  checkBox[i].addEventListener("click", ()=>{
-    var text1 = document.querySelectorAll(".text1")
-    var text2 = document.querySelectorAll(".text2")
-    
-    if(checkBox[i].checked == true){
-      console.log(text2)
-      text1.forEach((e)=>{
-        e.style.display = "block";
-      })
-      text2.forEach((e)=>{
-        e.style.display = "none";
-      })
-    } else if (checkBox[i].checked == false) {
-      text1.forEach((e)=>{
-        e.style.display = "none";
-      })
-      text2.forEach((e)=>{
-        e.style.display = "block";
-      })
-    }
-
-  })
-}
-
-// Pricing Toggle End
-
-
-
-// agency testimonial slider 
-$('.ag-testimonial-silder').owlCarousel({
-  items: 1,
-  loop: true,
-  smartSpeed: 1500,
-  autoplay: false,
-  dots: false,
-  margin:24,
-  nav: true,
-  navText : ["<i class='ts ts-1 bx bxs-left-arrow-alt'></i>","<i class='ts ts-2 bx bxs-right-arrow-alt' ></i>"], 
-});
-
-// EDu testimonial slider 
-$('.edu-testimonial-silder').owlCarousel({
-  items: 1,
-  loop: true,
-  smartSpeed: 3500,
-  animateOut: 'slideOutDown',
-  animateIn: 'flipInX',
-  autoplay: false,
-  dots: false,
-  margin:24,
-  nav: true,
-  // animateOut: 'edufadeOut',
-  navText : ["<i class='bi bi-arrow-left'></i>","<i class='bi bi-arrow-right' ></i>"], 
+  rtl:true
 });
 
 
-// Owl Carousel Creator
+// clinets
 $('.inner-slide-wrap').owlCarousel({
   items: 4,
   loop: true,
@@ -269,55 +87,6 @@ $('.inner-slide-wrap').owlCarousel({
 });
 
 
-// Contact Form Start
-
-// Get the form.
-var form = $('#contact-form');
-
-// Get the messages div.
-var formMessages = $('.form-message');
-
-// Set up an event listener for the contact form.
-$(form).on( 'submit', function(e) {
-  // Stop the browser from submitting the form.
-  e.preventDefault();
-
-  // Serialize the form data.
-  var formData = $(form).serialize();
-
-  // Submit the form using AJAX.
-  $.ajax({
-    type: 'POST',
-    url: $(form).attr('action'),
-    data: formData
-  })
-  .done(function(response) {
-    // Make sure that the formMessages div has the 'success' class.
-    $(formMessages).removeClass('error');
-    $(formMessages).addClass('success');
-
-    // Set the message text.
-    $(formMessages).text(response);
-
-    // Clear the form.
-    $('#contact-form input,#contact-form textarea').val('');
-  })
-  .fail(function(data) {
-    // Make sure that the formMessages div has the 'error' class.
-    $(formMessages).removeClass('success');
-    $(formMessages).addClass('error');
-
-    // Set the message text.
-    if (data.responseText !== '') {
-      $(formMessages).text(data.responseText);
-    } else {
-      $(formMessages).text('Oops! An error occured. Message could not be sent.');
-    }
-  });
-});
-// Contact Form End
-
-
 // Bottom to top start
 $(document).ready(function () {
   $(window).scroll(function () {
@@ -336,7 +105,6 @@ $(document).ready(function () {
 
 
 jQuery(window).on( 'load', function(){
-
   //wow Animation
   new WOW().init();
   window.wow = new WOW(
@@ -349,31 +117,7 @@ jQuery(window).on( 'load', function(){
     offset: 100
   }
   )
-  window.wow.init();
-        
-    
+  window.wow.init();  
 });
-
-// Datepicker
-$('input[name="dates"]').daterangepicker();
-
-//Mixitup
-$('.work-mixi').mixItUp();
-
-
-
-// Odometer Counter
-$(".counter-item").each(function () {
-  $(this).isInViewport(function (status) {
-  if (status === "entered") {
-      for (var i = 0; i < document.querySelectorAll(".odometer").length; i++) {
-      var el = document.querySelectorAll('.odometer')[i];
-      el.innerHTML = el.getAttribute("data-odometer-final");
-    }
-  }
-  });
-});
-
-
 
 }(jQuery)); 
