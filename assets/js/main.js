@@ -52,16 +52,15 @@ $('.hero-silder').owlCarousel({
 });
 
 
-// clinets
+// team
 $('.inner-slide-wrap').owlCarousel({
   items: 4,
-  loop: true,
-  smartSpeed: 1500,
+  loop: false,
   autoplay: false,
   dots: true,
   margin:24,
+  rtl:true,
   nav: false,
-  navText : ["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>"], 
   responsive:{
       0:{
           items:1
@@ -80,7 +79,40 @@ $('.inner-slide-wrap').owlCarousel({
           items:4
       },
       1400:{
+          items:5
+      }
+
+  } 
+});
+
+// clinets
+$('.clients-slide').owlCarousel({
+  items: 6,
+  loop: true,
+  autoplay: true,
+  dots: false,
+  margin:24,
+  rtl:true,
+  nav: false,
+  responsive:{
+      0:{
+          items:1
+      },
+      480:{
+          items:2
+      },
+
+      768:{
+          items:3
+      },
+      992:{
           items:4
+      },
+      1200:{
+          items:5
+      },
+      1400:{
+          items:6
       }
 
   } 

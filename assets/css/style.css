@@ -36,15 +36,15 @@ h4,
 h5,
 h6 {
   margin-bottom: 0;
-
   color: #183B56;
+  font-weight: normal;
 }
 
 html,
 body {
   font-weight: 400;
   line-height: 1.6;
-  color: #5A7184;
+  color: #656e6d;
   font-family: 'Bahij_Plain';
   font-size: 16px;
   direction: rtl;
@@ -272,12 +272,11 @@ input:-webkit-autofill:focus {
 }
 
 .hrdd-section-title h1 {
-
   font-style: normal;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 32px;
+  line-height: 45px;
   color: #203c37;
-  display: inline-block;
+  font-family: 'Bahij_SemiBold';
 }
 
 .hrdd-section-title h1 span {
@@ -794,12 +793,12 @@ input:-webkit-autofill:focus {
 .sticky {
   position: fixed;
   top: 0;
-  background: #F8F9FA;
+  background: #ffffff;
   z-index: 99;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.01);
-  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.01);
+  box-shadow: 0 2px 28px 0 rgb(0 0 0 / 8%);
   padding: 5px 0;
 }
 
@@ -1559,12 +1558,12 @@ input:-webkit-autofill:focus {
 }
 
 .hrrd-menu .main-nav>ul {
-  
-display: flex;
-  
-align-items: center;
-  
-gap: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
 }
 
 .hrrd-menu .main-nav>ul>li:hover>a {
@@ -1596,13 +1595,6 @@ gap: 25px;
 /*================================================
 13. Hrrd Hero area CSS
 =================================================*/
-.hrrd-hero-content h1 {
-
-font-size: 50px;
-
-color: #203c37;
-}
-
 .hrrd-hero-content .hrrd-hero-client-logo ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1755,9 +1747,7 @@ color: #203c37;
 }
 
 .hrrd-hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ECEFEF), to(#FFFFFF));
-  background: linear-gradient(180deg, #ECEFEF 0%, #FFFFFF 100%);
-  padding: 220px 0 134px;
+  padding: 150px 0 134px;
 }
 
 .hrrd-hero-shape {
@@ -1780,11 +1770,12 @@ color: #203c37;
   background: #FFFFFF;
   -webkit-box-shadow: 5px 30px 56.1276px rgba(55, 55, 55, 0.1098);
   box-shadow: 5px 30px 56.1276px rgba(55, 55, 55, 0.1098);
-  border-radius: 20px;
-  padding: 40px 30px;
-  margin-bottom: 24px;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  gap: 12px;
 }
 
 .featured-box:hover {
@@ -1792,23 +1783,30 @@ color: #203c37;
   transform: translateY(-4px);
 }
 
+.featured-box .featured-icon img {
+
+  width: 40px;
+
+  min-width: 40px;
+}
+
 .featured-box:hover .featured-content h2 {
   color: #1a1a1a;
 }
 
-.featured-box .featured-content {
-  padding-right: 23px;
-}
-
 .featured-box .featured-content h2 {
-
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: normal;
+  font-family: 'Bahij_SemiBold';
+  font-size: 21px;
   color: #203c37;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
   -webkit-transition: color .25s ease-in-out;
   transition: color .25s ease-in-out;
+}
+
+.featured-area {
+  padding-bottom: 70px;
 }
 
 .featured-area .featured-shape {
@@ -2192,8 +2190,8 @@ color: #203c37;
 }
 
 .collaborate-info>p {
-  margin-top: 27px;
-  margin-bottom: 28px;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 .collaborate-info .collaborate-info-list {
@@ -2362,42 +2360,11 @@ color: #203c37;
   }
 }
 
-.apps-box {
-  background: #FFFFFF;
-  -webkit-box-shadow: 5px 30px 56.1276px rgba(55, 55, 55, 0.1098);
-  box-shadow: 5px 30px 56.1276px rgba(55, 55, 55, 0.1098);
-  border-radius: 20px;
-  min-height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
-  margin-bottom: 24px;
-}
-
-.apps-box:hover {
-  background: #4b8e84;
-  -webkit-box-shadow: 10px 20px 50px rgba(81, 75, 75, 0.2);
-  box-shadow: 10px 20px 50px rgba(81, 75, 75, 0.2);
-  -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
-}
-
-.apps-box:hover img {
-  -webkit-filter: brightness(50%) hue-rotate(45deg);
-  filter: brightness(50%) hue-rotate(45deg);
-}
-
 .apps-box img {
-  -webkit-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  height: 70px;
+  object-fit: contain;
+  width: auto !important;
+  margin: 0 auto;
 }
 
 /*================================================
@@ -5283,6 +5250,7 @@ Agency Menu Css
 .latest-text {
   margin: 25px 0 33px;
   line-height: 32px;
+  font-size: 17px;
 }
 
 .latest-work-img-wrap {
@@ -5377,16 +5345,23 @@ Agency Menu Css
 
 .single-about-team .single-about-team-content h3 {
 
-  font-style: normal;
-  font-size: 22px;
-  color: #203c37;
-  margin: 36px 0 12px;
-  -webkit-transition: color .25s ease-in-out;
-  transition: color .25s ease-in-out;
+font-style: normal;
+
+font-family: 'Bahij_SemiBold';
+
+font-size: 21px;
+
+color: #203c37;
+
+margin: 25px 0 8px;
+
+-webkit-transition: color .25s ease-in-out;
+
+transition: color .25s ease-in-out;
 }
 
 .single-about-team .single-about-team-content p {
-  line-height: 1;
+  font-size: 17px;
 }
 
 .single-about-team .single-about-team-img {
@@ -5399,31 +5374,9 @@ Agency Menu Css
   will-change: filter;
 }
 
-.inner-slide-wrap .owl-dots {
-  text-align: center;
-  margin-top: 46px;
-}
-
-.inner-slide-wrap .owl-dots button {
-  width: 16px;
-  height: 16px;
-  background: #EBE0E0;
-  border: none;
-  border-radius: 50%;
-  margin-left: 16px;
-}
-
-.inner-slide-wrap .owl-dots button.active {
-  background: #4b8e84;
-}
-
-.inner-slide-wrap .owl-dots button:last-child {
-  margin-left: 0;
-}
-
 .inner-slide-wrap .owl-item img {
-  display: unset;
-  width: unset;
+  height: 300px;
+  object-fit: cover;
 }
 
 .about-testimonial-area {
@@ -5504,10 +5457,11 @@ Agency Menu Css
 
 .all-services-area {
   background: #F9F9F9;
+  padding: 70px 0 50px;
 }
 
 .all-services-area .latest-text {
-  margin: 25px 0 0px;
+  margin: 10px 0 0px;
 }
 
 .all-services-box {
@@ -5542,7 +5496,7 @@ Agency Menu Css
 .all-services-box .all-services-icon i {
   width: 70px;
   height: 70px;
-  background: rgba(90, 113, 132, 0.1);
+  background: rgb(255 248 231);
   border-radius: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5553,29 +5507,30 @@ Agency Menu Css
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #697F90;
+  color: #4b8e84;
   font-size: 38px;
   -webkit-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
 
 .all-services-box .all-services-content h3 {
-  margin: 26px 0 25px;
-
-  font-style: normal;
+  margin: 20px 0 20px;
   font-size: 22px;
   color: #203c37;
+  font-family: 'Bahij_SemiBold';
 }
 
 .all-services-box .all-services-content p {
-  color: #5A7184;
   margin-bottom: 14px;
-  line-height: 32px;
+  line-height: 28px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .all-services-box .all-services-content a {
   color: #4b8e84;
-  font-weight: 600;
   font-size: 18px;
 }
 
@@ -6443,7 +6398,7 @@ Agency Menu Css
 .sk-cube-grid .sk-cube {
   width: 33%;
   height: 33%;
-  background-color: #FF8345;
+  background-color: #203c37;
   float: right;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
   animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
@@ -6570,6 +6525,169 @@ Agency Menu Css
   height: 65px;
 }
 
+header::after {
+  content: '';
+  background: #f0f3f3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 85vh;
+}
+
+.flex-hero {
+  display: flex;
+}
+
+.hrrd-hero-content {
+  width: 540px;
+  min-width: 540px;
+  position: absolute;
+  z-index: 2;
+  padding: 40px 0;
+}
+
+.hrrd-hero-content h1 {
+  font-size: 37px;
+  color: #203c37;
+  background: #fff;
+  padding: 25px;
+  line-height: 55px;
+  position: relative;
+  box-shadow: rgb(149 157 165 / 11%) -35px 8px 24px;
+  margin-bottom: 25px;
+  font-family: 'Bahij_SemiBold';
+}
+
+.hrrd-hero-content h1 svg {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 100%;
+  z-index: 0;
+}
+
+svg line {
+  stroke: #cccccc47;
+  stroke-width: 0.1rem;
+}
+
+.hrrd-hero-content p {
+  width: 400px;
+  font-size: 18px;
+  padding: 15px;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 110px;
+}
+
+.social-media li a {
+  background: #ECEFEF;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #607270;
+}
+
+.social-media li a i {
+  display: flex;
+  font-size: 18px;
+}
+
+.hero-silder {
+  width: calc(100% - 490px);
+  margin-right: auto;
+  margin-left: 50px;
+}
+
+.hero-silder .owl-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.hero-silder.owl-carousel .owl-dots{
+  margin-top: 20px;
+}
+
+.owl-carousel .owl-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: unset;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+
+.owl-carousel .owl-dots .owl-dot.active span {
+  width: 12px;
+  height: 12px;
+}
+
+.flex-hero .left-img {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  height: 220px;
+  bottom: 100px;
+}
+
+.target-sec {
+  padding: 70px 0;
+}
+
+.flex-content {
+  display: flex;
+  position: relative;
+}
+
+.flex-content .collaborate-img-wrap img {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.flex-content .content-target {
+  position: absolute;
+  background: #f9f9f9;
+  padding: 35px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 630px;
+  margin: auto;
+  height: max-content;
+}
+
+.about-team-area,
+.clients-sec {
+  padding: 70px 0;
+}
+
+.contact-area {
+  
+}
+
 /* abdo responsive */
 
 @media only screen and (min-width: 1400px) and (max-width: 1570px) {
@@ -6612,9 +6730,6 @@ Agency Menu Css
     justify-content: center;
   }
 
-  .hrrd-hero-content h1 {
-    font-size: 59px;
-  }
 
   .hrrd-hero-img-wrap .hrrd-hero-post {
     right: 0;
@@ -7336,6 +7451,7 @@ Agency Menu Css
 }
 
 @media (min-width: 1400px) {
+
   .container,
   .container-lg,
   .container-md,
